@@ -60,9 +60,12 @@ table{
 
 th, td{
     text-align: center;
-    padding: 3px;
+    padding: 8px;
 }
-
+tr {
+    font-size: small;
+    border: 1px solid dimgray;
+}
 tr:nth-child(even){
     background-color: #ccc;
 	color:#f8f9fa;
@@ -72,9 +75,15 @@ div#output {
 	background-color: floralwhite;
     margin: 2rem auto;
     width: fit-content;
-    margin: 0 autoo;
+    margin: 0 auto;
     margin: 0 auto;
 	box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+input.btn.btn-success {
+    margin: 2rem;
+}
+input.btn.btn-danger {
+    margin: 2rem;
 }
 </style>
 </head>
@@ -149,7 +158,7 @@ div#output {
 					<div class="form-group">
 				<div class="validate">	
 					<input type="reset" name="reset" value="Cancel" class="btn btn-danger" onclick="Reset()">
-                   <input type="submit" name="submit" value="submit" class="btn btn-success" onclick="validation()">
+                   <input type="submit" name="submit" value="submit" class="btn btn-success" >
 		       </div></div>
 			
 			</form>
@@ -214,7 +223,7 @@ div#output {
 			passw= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/;
 			if (!passw.test(pass)) {
         
-				document.getElementById('passwords').innerHTML ="  Please provide a valid password";
+				document.getElementById('passwords').innerHTML ="  Please provide  password At Least one symbol, one number and on Capital letter";
 				return false;
 			}
 			else
